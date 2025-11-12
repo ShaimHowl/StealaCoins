@@ -24,3 +24,6 @@ shape = SubResource("WorldBoundaryShape2D_4cw5y")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4cw5y")
 format = 2
+
+[node name="TileMap2" type="TileMap" parent="."]
+format = 2
