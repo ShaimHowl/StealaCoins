@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3l120pwrhb7m"]
+
+[ext_resource type="PackedScene" uid="uid://dtse1o8wnri4f" path="res://Scenes/jugador.tscn" id="1_uqtxj"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4cw5y"]
+distance = -7.0
+
+[sub_resource type="TileSet" id="TileSet_4cw5y"]
+
+[node name="Mundo" type="Node2D"]
+
+[node name="jugador" parent="." instance=ExtResource("1_uqtxj")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 2)
+offset = Vector2(0, -30)
+zoom = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_4cw5y")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_4cw5y")
+format = 2
